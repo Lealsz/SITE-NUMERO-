@@ -1,0 +1,229 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+#greeting h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#greeting h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: typing 3s steps(30) 1s forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.btn-scroll {
+    padding: 10px 20px;
+    background-color: white;
+    color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.btn-scroll:hover {
+    background-color: #45a049;
+}
+
+/* Sobre Mim */
+#sobre {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.bio {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bio img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.bio p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.skills {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skills li {
+    padding: 10px 20px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+/* Portfólio */
+#portfolio {
+    background-color: #f7f7f7;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.project-card {
+    max-width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Depoimentos */
+#depoimentos {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.testimonial footer {
+    text-align: right;
+    font-style: italic;
+}
+
+/* Experiência */
+#experiencia {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.timeline-item {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contato */
+#contato {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
