@@ -1,9 +1,9 @@
 :root {
-    --cor-primaria: #4CAF50;
+    --cor-primaria: #0003b6;
     --cor-secundaria: #333;
-    --cor-fundo: #f5f5f5;
+    --cor-fundo: #830808;
     --cor-branca: #ffffff;
-    --cor-texto: #222;
+    --cor-texto: #ffffff;
     --cor-cinza: #888;
     --fonte-principal: 'Poppins', sans-serif;
     --sombra-box: 0 4px 8px rgba(0, 0, 0, 0.1);
