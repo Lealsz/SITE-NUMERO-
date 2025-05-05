@@ -48,7 +48,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #4CAF50, #45a049);
+    background: linear-gradient(135deg, #059bff, #0e4ead);
     color: var(--cor-branca);
     text-align: center;
     padding: 40px;
@@ -240,7 +240,7 @@
   }
   
   button:hover {
-    background-color: #3e9140;
+    background-color: #830505;
   }
   
   footer {
