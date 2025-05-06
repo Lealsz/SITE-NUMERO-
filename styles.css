@@ -1,292 +1,164 @@
 :root {
-    --cor-primaria: #0003b6;
-    --cor-secundaria: #333;
-    --cor-fundo: #830808;
-    --cor-branca: #ffffff;
-    --cor-texto: #ffffff;
-    --cor-cinza: #888;
-    --fonte-principal: 'Poppins', sans-serif;
-    --sombra-box: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --borda-radius: 10px;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: var(--fonte-principal);
-    color: var(--cor-texto);
-    background-color: var(--cor-fundo);
-    line-height: 1.6;
-  }
-  
-  section {
-    padding: 60px 20px;
-  }
-  
-  h1, h2, h3 {
-    margin-bottom: 20px;
-    color: var(--cor-secundaria);
-  }
-  
-  p {
-    color: var(--cor-cinza);
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  #home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #059bff, #0e4ead);
-    color: var(--cor-branca);
-    text-align: center;
-    padding: 40px;
-  }
-  
-  #greeting h1 {
-    font-size: 3rem;
-    animation: fadeInDown 1s ease-out;
-  }
-  
-  #greeting h2 {
-    font-size: 1.5rem;
-    animation: typing 4s steps(40, end) 1s forwards;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid var(--cor-branca);
-    width: 0;
-  }
-  
-  .btn-scroll {
-    margin-top: 30px;
-    padding: 12px 30px;
-    background-color: var(--cor-branca);
-    color: var(--cor-primaria);
-    border-radius: var(--borda-radius);
-    font-weight: bold;
-    transition: background 0.3s;
-  }
-  
-  .btn-scroll:hover {
-    background-color: #e0e0e0;
-  }
-  
+  --azul: #0000FF;
+  --preto: #000000;
+  --branco: #ffffff;
+  --cinza: #f0f0f0;
+}
 
-  #sobre {
-    text-align: center;
-    background-color: var(--cor-branca);
-  }
-  
-  .bio {
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .bio img {
-    width: 160px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: var(--sombra-box);
-    transition: transform 0.3s ease;
-  }
-  
-  .bio img:hover {
-    transform: scale(1.05);
-  }
-  
-  .skills {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  
-  .skills li {
-    background-color: var(--cor-fundo);
-    padding: 10px 20px;
-    border-radius: var(--borda-radius);
-    box-shadow: var(--sombra-box);
-    font-weight: 500;
-  }
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-  #portfolio {
-    background-color: var(--cor-fundo);
-    text-align: center;
-  }
-  
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
-  
-  .project-card {
-    background: var(--cor-branca);
-    border-radius: var(--borda-radius);
-    box-shadow: var(--sombra-box);
-    padding: 20px;
-    transition: transform 0.3s;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .project-card img {
-    width: 100%;
-    border-radius: var(--borda-radius);
-    margin-bottom: 15px;
-  }
-  
-  #depoimentos {
-    background: var(--cor-branca);
-    text-align: center;
-  }
-  
-  .carousel {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 30px;
-  }
-  
-  .testimonial {
-    background-color: var(--cor-fundo);
-    padding: 20px;
-    border-radius: var(--borda-radius);
-    width: 300px;
-    box-shadow: var(--sombra-box);
-    transition: transform 0.3s;
-  }
-  
-  .testimonial:hover {
-    transform: scale(1.05);
-  }
-  
-  #experiencia {
-    text-align: center;
-  }
-  
-  .timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 40px;
-  }
-  
-  .timeline-item {
-    background: var(--cor-branca);
-    padding: 20px;
-    border-left: 5px solid var(--cor-primaria);
-    box-shadow: var(--sombra-box);
-    border-radius: var(--borda-radius);
-  }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--preto);
+  color: var(--branco);
+}
 
-  #contato {
-    background: var(--cor-fundo);
-    text-align: center;
-  }
-  
-  form {
-    max-width: 600px;
-    margin: auto;
-    background: var(--cor-branca);
-    padding: 30px;
-    border-radius: var(--borda-radius);
-    box-shadow: var(--sombra-box);
-  }
-  
-  label {
-    display: block;
-    margin-top: 15px;
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 8px;
-    border-radius: var(--borda-radius);
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 12px 30px;
-    background-color: var(--cor-primaria);
-    color: var(--cor-branca);
-    border: none;
-    border-radius: var(--borda-radius);
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  button:hover {
-    background-color: #830505;
-  }
-  
-  footer {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-branca);
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-  }
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+/* Loader */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--preto);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease 2.8s forwards;
+}
 
-  @media (max-width: 768px) {
-    #greeting h1 {
-      font-size: 2.2rem;
-    }
-  
-    .projects, .carousel {
-      flex-direction: column;
-      gap: 20px;
-    }
-  
-    .skills {
-      justify-content: center;
-    }
-  
-    .timeline-item {
-      width: 100%;
-    }
+.spinner {
+  border: 6px solid var(--cinza);
+  border-top: 6px solid var(--azul);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+#loader p {
+  margin-top: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
-  
+}
+
+/* NAV */
+nav#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--preto);
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+nav#navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav#navbar a {
+  color: var(--branco);
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+nav#navbar a:hover,
+nav#navbar a.active {
+  color: var(--azul);
+  border-bottom: 2px solid var(--azul);
+}
+
+/* Seções */
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-scroll {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--azul);
+  color: var(--branco);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn-scroll:hover {
+  background: #3333ff;
+}
+
+/* Outros elementos */
+.skills, .projects, .testimonial {
+  margin-top: 20px;
+}
+
+.project-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 10px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+form input, form textarea, form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+form input, form textarea {
+  background: #222;
+  color: var(--branco);
+}
+
+form button {
+  background: var(--azul);
+  color: var(--branco);
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  background: #111;
+}
