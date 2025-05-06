@@ -1,58 +1,48 @@
-// Atualiza o ano automaticamente
-document.getElementById('ano').textContent = new Date().getFullYear();
 
-// Loader desaparece após carregar
-window.addEventListener('load', () => {
-  document.getElementById('loader').style.display = 'none';
-});
-
-// Scroll suave para âncoras
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const alvo = document.querySelector(link.getAttribute('href'));
-    if (alvo) alvo.scrollIntoView({ behavior: 'smooth' });
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    loader.classList.add("fade-out");
+    setTimeout(() => loader.style.display = "none", 500);
   });
-});
-
-// ScrollSpy
-const navLinks = document.querySelectorAll('#navbar a');
-
-window.addEventListener('scroll', () => {
-  const fromTop = window.scrollY + 120;
-  navLinks.forEach(link => {
-    const section = document.querySelector(link.getAttribute('href'));
-    if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-    }
+  
+  const sections = document.querySelectorAll(".section");
+  const navLinks = document.querySelectorAll(".nav-links a");
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.querySelector('.nav-links a.active')?.classList.remove('active');
+        const id = entry.target.getAttribute("id");
+        document.querySelector(`.nav-links a[href="#${id}"]`)?.classList.add('active');
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.6
   });
-});
-
-// Animar entrada das seções
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+  
+  sections.forEach(section => {
+    observer.observe(section);
   });
-}, { threshold: 0.2 });
+  const toggleTheme = document.getElementById("theme-toggle");
+  toggleTheme.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+  });
+  
 
-document.querySelectorAll('section').forEach(section => {
-  observer.observe(section);
-});
+  const hamburger = document.getElementById("hamburger");
+  const navLinksContainer = document.querySelector(".nav-links");
+  
+  hamburger.addEventListener("click", () => {
+    navLinksContainer.classList.toggle("open");
+  });
+  
 
-// Feedback do formulário
-document.getElementById('formulario').addEventListener('submit', e => {
-  e.preventDefault();
-  const botao = e.target.querySelector('button');
-  botao.textContent = 'Enviando...';
-  botao.disabled = true;
-
-  setTimeout(() => {
-    alert('Mensagem enviada com sucesso!');
-    e.target.reset();
-    botao.textContent = 'Enviar';
-    botao.disabled = false;
-  }, 1500);
-});
+  window.addEventListener("scroll", () => {
+    const progress = document.querySelector(".progress-bar");
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progress.style.width = `${scrollPercent}%`;
+  });
+  
