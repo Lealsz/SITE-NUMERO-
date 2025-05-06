@@ -20,10 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
     themeToggleButton.addEventListener('click', toggleTheme);
   
+
     hamburgerMenu.addEventListener('click', () => {
       navLinksContainer.classList.toggle('open');
     });
   
+
     const setActiveLink = () => {
       const scrollPosition = window.scrollY;
       navbarLinks.forEach(link => {
@@ -43,8 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
       loader.classList.add('fade-out');
       setTimeout(() => {
         loader.style.display = 'none';
-      }, 500);
+      }, 500); 
     });
+  )
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -94,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       observerCounter.observe(counter);
     });
+  
     if (isDarkMode) {
       document.body.classList.add('dark');
       themeToggleButton.textContent = '🌙';
@@ -101,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.remove('dark');
       themeToggleButton.textContent = '🌞';
     }
-  
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
       card.addEventListener('mouseenter', () => {
