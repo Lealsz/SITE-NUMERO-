@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio profissional de Coruja. Desenvolvedor web.">
-    <meta name="keywords" content="portfólio, desenvolvedor web, HTML, CSS, JavaScript">
+    <meta name="description" content="Portfólio de Coruja.">
+    <meta name="keywords" content="portfólio">
     <meta name="author" content="Coruja">
     <title>Coruja </title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/img/CORUJA.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
-            <!-- Logo da Coruja -->
-            <img src="logo-coruja.png" alt="Logo Coruja" class="logo">
-            <h1>Bem-vindo ao Coruja</h1>
-            <p>Desenvolvedor Front-End | Transformando ideias em soluções digitais</p>
-            <a href="#contato" class="btn">Entre em Contato</a>
+            <div class="header-left">
+                <img src="/img/blob_https___www.remove" alt="Logo Coruja" class="logo">
+            </div>
+            <div class="header-center">
+                <h1>Bem-vindo ao Coruja</h1>
+                <p>Desenvolvedor</p>
+            </div>
+            <div class="header-right">
+                <a href="#contato" class="btn">Entre em Contato</a>
+                <a href="#sobre" class="btn">Sobre</a>
+                <a href="#projetos" class="btn">Projetos</a>
+            </div>
         </div>
     </header>
 
-    <!-- Seção de Projetos -->
+    <section id="intro">
+        <div class="intro-content">
+            <h1 id="typed-text">Bem-vindo à experiência</h1>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Sou um desenvolvedor apaixonado por criar soluções digitais inovadoras. Com experiência em front-end e design, busco constantemente novos desafios que me permitam crescer e melhorar minhas habilidades.</p>
+            <p>Tenho experiência em HTML, CSS e JavaScript, e estou sempre em busca de novos conhecimentos. Minha abordagem para o desenvolvimento é focada na criação de interfaces eficientes, responsivas e acessíveis.</p>
+        </div>
+    </section>
+
     <section id="projetos">
         <div class="container">
             <h2>Projetos Recentes</h2>
@@ -49,6 +70,7 @@
         </div>
     </section>
 
+
     <!-- Seção de Habilidades -->
     <section id="habilidades">
         <div class="container">
@@ -56,21 +78,20 @@
             <div class="habilidades">
                 <div class="habilidade">
                     <h3>HTML</h3>
-                    <div class="barra-progresso" style="width: 95%;"></div>
+                    <div class="barra-progresso" style="width: 30%;"></div>
                 </div>
                 <div class="habilidade">
                     <h3>CSS</h3>
-                    <div class="barra-progresso" style="width: 90%;"></div>
+                    <div class="barra-progresso" style="width: 30%;"></div>
                 </div>
                 <div class="habilidade">
                     <h3>JavaScript</h3>
-                    <div class="barra-progresso" style="width: 85%;"></div>
+                    <div class="barra-progresso" style="width: 45%;"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Contato -->
     <section id="contato">
         <div class="container">
             <h2>Entre em Contato</h2>
@@ -82,6 +103,25 @@
             </form>
         </div>
     </section>
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-info">
+            <h3>Coruja</h3>
+            <p><i class="fas fa-envelope"></i> guilhermeleals776@gmail.com </p>
+            <p><i class="fas fa-phone-alt"></i> (11) 99570-7588</p>
+            <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP - Brasil</p>
+          </div>
+          <div class="footer-social">
+            <a href="https://github.com/Lealsz" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/seuperfil" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://mailto:guilhermeleals776@gmai.com.br?subject=ola, tudo bom?&cc=guilhermeleals776@gmai.com.br&bcc=guilhermeleals776@gmai.com.br&body=Conteúdo do email que será preenchido automaticamente"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2025 Coruja. Todos os direitos reservados.</p>
+        </div>
+      </footer>
 
     <script src="script.js"></script>
 </body>
